@@ -1,0 +1,14 @@
+<% _.each(lists, function(list) { %>
+  <div class="list-container" data-id="<%= list.id %>">
+    <a class='add-todo-list' href="#">Add todo item</a>
+    <form class='todo-list-add-form' action="#" style="display: none;">
+      Name:
+      <input name="text" type="text"></input>
+      <input type="submit" value="submit"></input>
+    </form>
+    <h1><%= list.text %></h1>
+    <ul class="items">
+
+    </ul>
+  </div>  
+<% }); $%>

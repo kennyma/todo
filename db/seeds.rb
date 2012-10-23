@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if !User.exists?(:email => "scott@railsnewbie.com")
+  puts "* Creating myself!"
+  user = User.new
+  user.email = "scott@railsnewbie.com"
+  user.save!
+
+  puts "* Creating 'My Todo List'"
+  list = TodoList.new
+  list.user = user
+  list.text = "My Todo List"
+  list.save!
+end
+
